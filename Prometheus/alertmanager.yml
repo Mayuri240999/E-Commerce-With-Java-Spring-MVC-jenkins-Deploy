@@ -1,0 +1,20 @@
+---
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: "email-alerts"
+  group_by: ["alertname"]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 3h
+
+receivers:
+  - name: "email-alerts"
+    email_configs:
+      - to: "mayu79621@gmail.com"
+        from: "alerts@example.com"
+        smarthost: "email-smtp.eu-west-3.amazonaws.com:587"
+        auth_username: "AKIAXWHDLW3XQEDT7KXR"
+        auth_password: "BPv938Q38e3LEZ0INqapSosCt5Q9eaoWaezl+jqKUHkg"
+        require_tls: true
