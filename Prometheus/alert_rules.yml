@@ -1,0 +1,77 @@
+groups:
+- name: system_alerts
+  rules:
+  
+  # High CPU Usage Alerts
+  - alert: HighCPUUsage_Jenkins
+    expr: (100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle", instance="jenkins-server-ip:9100"}[5m])) * 100)) > 80
+    for: 2m
+    labels:
+      severity: warning 
+    annotations:
+      summary: "High CPU usage on Jenkins"
+      description: "CPU usage on Jenkins is above 80% for more than 2 minutes."
+
+  - alert: HighCPUUsage_SonarQube
+    expr: (100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle", instance="sonarqube-server-ip:9100"}[5m])) * 100)) > 80
+    for: 2m
+    labels:
+      severity: warning 
+    annotations:
+      summary: "High CPU usage on SonarQube"
+      description: "CPU usage on SonarQube is above 80% for more than 2 minutes."
+
+  - alert: HighCPUUsage_Tomcat
+    expr: (100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle", instance="tomcat-server-ip:9100"}[5m])) * 100)) > 80
+    for: 2m
+    labels:
+      severity: warning 
+    annotations:
+      summary: "High CPU usage on Tomcat"
+      description: "CPU usage on Tomcat is above 80% for more than 2 minutes."
+
+  - alert: HighCPUUsage_Prometheus
+    expr: (100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle", instance="prometheus-server-ip:9100"}[5m])) * 100)) > 80
+    for: 2m
+    labels:
+      severity: warning 
+    annotations:
+      summary: "High CPU usage on Prometheus"
+      description: "CPU usage on Prometheus is above 80% for more than 2 minutes."
+
+  # High Memory Usage Alerts
+  - alert: HighMemoryUsage_Jenkins
+    expr: (1 - (node_memory_MemAvailable_bytes{instance="jenkins-server-ip:9100"} / node_memory_MemTotal_bytes{instance="jenkins-server-ip:9100"})) * 100 > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Memory usage on Jenkins"
+      description: "Memory usage on Jenkins is above 80% for more than 2 minutes."
+
+  - alert: HighMemoryUsage_SonarQube
+    expr: (1 - (node_memory_MemAvailable_bytes{instance="sonarqube-server-ip:9100"} / node_memory_MemTotal_bytes{instance="sonarqube-server-ip:9100"})) * 100 > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Memory usage on SonarQube"
+      description: "Memory usage on SonarQube is above 80% for more than 2 minutes."
+
+  - alert: HighMemoryUsage_Tomcat
+    expr: (1 - (node_memory_MemAvailable_bytes{instance="tomcat-server-ip:9100"} / node_memory_MemTotal_bytes{instance="tomcat-server-ip:9100"})) * 100 > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Memory usage on Tomcat"
+      description: "Memory usage on Tomcat is above 80% for more than 2 minutes."
+
+  - alert: HighMemoryUsage_Prometheus
+    expr: (1 - (node_memory_MemAvailable_bytes{instance="prometheus-server-ip:9100"} / node_memory_MemTotal_bytes{instance="prometheus-server-ip:9100"})) * 100 > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Memory usage on Prometheus"
+      description: "Memory usage on Prometheus is above 80% for more than 2 minutes."
