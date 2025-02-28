@@ -1,13 +1,5 @@
 # ShoppingCart - An amazing website [![HitCount](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)]
 
-Developer: <b>Engr Saad</b> <br>
-Email: saad@triangeltech.com<br>
-Website: https://engr-saad.com <br>
-LinkedIn: https://www.linkedin.com/in/engr-saad/<br>
-Facebook: https://www.facebook.com/Engr.Saad.2/<br>
-Company WEB: https://triangletech.com.bd/ <br>
-WhatsApp: +8801810536303<br>
-
 
 We developed an end to end **Ecommerce web Application using Spring MVC** with multiple
 modules
@@ -62,16 +54,26 @@ modules
 4. Database - H2 Database
 
    * [Download H2 Database](http://www.h2database.com/html/download.html).
+     
+5. CI/CD Tool - Jenkins
+   * [Install Jenkins](https://www.jenkins.io/doc/book/installing/linux/)
 
-5. Configuring tomcat with Eclipse (windows) - [Click Here](https://javatutorial.net/run-tomcat-from-eclipse).
+6. Deploy Tool - Tomcat
+   * [Download Tomcat](https://tomcat.apache.org/download-90.cgi)
 
-6. Installation of maven in eclipse - [Click Here](https://stackoverflow.com/questions/8620127/maven-in-eclipse-step-by-step-installation).
+7. Monitoring Tool - Prometheus
+   * [Install Prometheus](https://www.cherryservers.com/blog/install-prometheus-ubuntu)
 
-7. Clone the repository and import it to eclipse.
+8. Visualization Tool - Grafana
+   * [Install Grafana](https://www.cherryservers.com/blog/install-grafana-ubuntu)
+   
+5. Installation of maven in eclipse - [Click Here](https://stackoverflow.com/questions/8620127/maven-in-eclipse-step-by-step-installation).
 
-8. Run your H2 Database.
+6. Clone the repository and import it to eclipse.
 
-9. Configure your databse configuration in **application-context.xml**.
+7. Run your H2 Database.
+
+8. Configure your databse configuration in **application-context.xml**.
 
    * Database properties:
 
@@ -90,12 +92,7 @@ modules
 
             <prop key="hibernate.dialect">YOUR DB DIALECT</prop>
 
-10. Run the server.
-
-#### Somethings wrong!!
-
-If you find that something's wrong with this package, you can let me know by raising an issue on the GitHub issue tracker, 
-or take it as a task and 🧑‍💻 resolve it 💪 --> create a PullRequest 🛠.
+9. Run the server.
 
 #### Contribution
 
@@ -107,7 +104,4 @@ Contributors are most welcome.
 
 ![Alt text](https://github.com/ikismail/ShoppingCart/blob/master/src/main/webapp/WEB-INF/resource/images/screenshots/Home.jpg "Home Page")
 
-* Contact Us:
-
-![Alt text](https://github.com/ikismail/ShoppingCart/blob/master/src/main/webapp/WEB-INF/resource/images/screenshots/ContactUs.png)
 
