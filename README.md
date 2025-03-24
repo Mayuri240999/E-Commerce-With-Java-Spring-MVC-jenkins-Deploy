@@ -1,6 +1,6 @@
 # ShoppingCart - An amazing website [![HitCount](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)]
 
-
+### Project Overview:
 This project is a **web-based E-Commerce platform** that allows users to browse products, add them to their cart, and complete purchases. The backend is developed using **Java Spring MVC**, and the deployment process is automated using **Jenkins**. The application is hosted on **Tomcat** and interacts with a **H2 database** for storing user and product data.
 
 
