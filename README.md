@@ -1,9 +1,7 @@
 # ShoppingCart - An amazing website [![HitCount](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)]
 
 
-We developed an end to end **Ecommerce web Application using Spring MVC** with multiple
-modules
-
+This project is a **web-based E-Commerce platform** that allows users to browse products, add them to their cart, and complete purchases. The backend is developed using **Java Spring MVC**, and the deployment process is automated using **Jenkins**. The application is hosted on **Tomcat** and interacts with a **H2 database** for storing user and product data.
 
 
 ### Functionalities:
@@ -20,12 +18,11 @@ modules
 3. **Spring Security**
 
 * User can login into the site.
-* The entire site will change according to the role, depending on whether the client is User or Admin.
 * User can logout after completing.
 
 4. **Spring WebFlow**
 
-* After adding products the cart the User can checkout using spring WebFlow.
+* After adding products in cart the User can checkout.
 * Confirming User Details.
 * Confirming Shipping and Billing Address.
 * Receipt.
@@ -34,9 +31,13 @@ modules
 
 ### Tools and Technologies:
 
+* **Version Control** : Git, GitHub
 * **Technology** : Bootstrap, Java, Spring MVC, Hibernate, JSP, Maven.
+* **Build & CI/CD** : Jenkins, Maven
+* **Code Quality Analysis** : SonarQube
 * **Application Servicer**: Apache Tomcat Server.
 * **Database** : H2 Database (In memory database)
+* **Monitoring & Logging** : Prometheus, Grafana
 
 ### Installation:
 
